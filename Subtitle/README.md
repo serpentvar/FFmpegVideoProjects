@@ -8,26 +8,34 @@
 
 ### `process_srt_style.ps1` Explanation
 
-The `process_srt_style.ps1` script is invoked by `change_srt_style.bat`. It applies the style changes to the SRT subtitles. The style options are defined within the script and include font, size, color, and more. You can modify these style options in the script to match your desired subtitle style.
+- `process_srt_style.ps1` is a PowerShell script called by `change_srt_style.bat`. It handles the application of style changes to SRT subtitles.
 
-Please make sure that both the `change_srt_style.bat` and `process_srt_style.ps1` files are located in the same directory as your SRT subtitle file. Additionally, ensure that you have PowerShell installed on your system for the scripts to work correctly.
+- **Style Customization**: You can customize the subtitle style within the script by modifying options such as font, size, color, and more to achieve your desired subtitle appearance.
+
+- **File Location**: Ensure that both `change_srt_style.bat` and `process_srt_style.ps1` are located in the same directory as the SRT subtitle file you wish to modify.
+
+- **Prerequisite**: PowerShell must be installed on your system for the script to function correctly.
 
 ### `render_srt.bat` Usage Instructions
 
-1. **Drag and Drop**: To render SRT subtitles onto video files, simply drag and drop one or more video files onto the `render_srt.bat` file.
+1. **Drag and Drop**: To add SRT subtitles to video files, simply drag and drop one or more video files onto the `render_srt.bat` script.
 
-2. **Processing**: The script will automatically process each video file and its corresponding SRT subtitle file located in the same directory. It uses FFmpeg to render the subtitles onto the video with specified settings.
+2. **Automatic Processing**: The script will automatically process each video file and its corresponding SRT subtitle file located in the same directory.
 
-3. **Output**: After processing, the script will create new video files with the subtitles added. These new video files will have the same name as the original video files but with "_with_subtitles" appended to their names. The new video files will be saved in the same directory as the original files.
+3. **Output Files**: After processing, the script will generate new video files with the subtitles added. These files will have the same name as the original videos but with "_with_subtitles" appended. All output files will be saved in the same directory as the originals.
 
-4. **Performance**: The script uses the h264_nvenc video encoder for efficient video processing. You can modify the video encoding settings within the script to suit your requirements.
+4. **Efficient Encoding**: The script utilizes the h264_nvenc video encoder for efficient video processing. You can adjust the video encoding settings within the script to suit your preferences.
 
-5. **Completion**: Once all the files have been processed, you will see a message indicating that all files have been processed.
+5. **Completion Message**: Upon completing the processing of all files, you will receive a message indicating that all files have been successfully processed.
 
-6. **Exit**: You can exit the script by pressing the Enter key when prompted.
+6. **Exit**: To exit the script, press the Enter key when prompted.
 
 ### Description
 
-The `render_srt.bat` script automates the process of adding SRT subtitles to video files using FFmpeg. It is designed for ease of use, allowing you to simply drag and drop video files onto the script to add subtitles. The script uses the h264_nvenc video encoder for efficient video processing.
+The `render_srt.bat` script streamlines the process of adding SRT subtitles to video files using FFmpeg. Its user-friendly drag-and-drop functionality simplifies the operation.
 
-Please ensure that you have FFmpeg installed and accessible via the command line for the script to work correctly. Also, make sure that your video files and their corresponding SRT subtitle files are in the same directory as the script.
+- **Dependencies**: Ensure that FFmpeg is installed and accessible via the command line for the script to function correctly.
+
+- **File Placement**: Place your video files and their corresponding SRT subtitle files in the same directory as the script for seamless execution.
+
+These scripts provide efficient and convenient methods for modifying SRT subtitle styles and rendering subtitles onto video content. Customize the scripts as needed to meet your specific requirements.
