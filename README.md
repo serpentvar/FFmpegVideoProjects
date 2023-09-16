@@ -30,13 +30,13 @@ This repository primarily contains Windows batch files (.bat), which are designe
 ### Use Wine on Linux
 You can use the Wine compatibility layer to run Windows applications on Linux.
 1. Install Wine
-   \`\`\`
+   ```
    sudo apt install wine
-   \`\`\`
+   ```
 2. Run the batch file
-   \`\`\`
+   ```
    wine cmd /c your-script.bat
-   \`\`\`
+   ```
 
 ### Use a Virtual Machine or Docker
 1. Create a Windows virtual machine or container.
