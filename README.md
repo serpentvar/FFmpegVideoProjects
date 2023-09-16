@@ -1,18 +1,16 @@
+# FFmpegVideoProjects
+
 ## Introduction
-Welcome to `FFmpegVideoProjects`. This repository serves as a showcase for various video editing techniques using FFmpeg. Techniques include, but are not limited to, video cropping, overlaying, scaling, and adding subtitles.
+This repository houses a collection of FFmpeg scripts designed to automate a variety of video editing tasks. Simply drag and drop your video files onto the respective scripts to easily crop, scale, overlay, and apply other effects to your videos.
 
-## Features
-- Video Cropping
-- Video Scaling
-- Video Overlaying
-- Adding Subtitles
-
-## Prerequisites
-- FFmpeg installed ([Installation guide](https://ffmpeg.org/download.html))
+## Installation
+1. Clone this repository.
+2. Make sure FFmpeg is installed and added to your PATH environment variable.
+3. Just drag and drop your video files onto the respective .bat file
 
 ## Usage
-To use the scripts from this repository, first clone it to your local machine. Navigate to the script directory and run the scripts on your video files.
+To use the scripts in this repository, you don't need to manually run any commands. Just drag and drop your video files onto the respective scripts to execute the corresponding actions.
 
-### Video Cropping and Scaling
-```batch
-for %%a in (%*) do "ffmpeg.exe" -i %%a -vf "scale=-1:1920,crop=1080:1920" -c:v h264_nvenc -preset slow -cq 0 -b:v 16000k -c:a copy "%%~na_shorts.mp4"
+## How to Contribute
+If you find any bugs or have feature requests, feel free to open an issue or submit a pull request.
+
