@@ -1,3 +1,5 @@
+## Change srt style
+
 ### `change_srt_style.bat` Usage Instructions
 
 1. Drag and drop the SRT subtitle file that you want to modify onto the `change_srt_style.bat` file.
@@ -16,7 +18,7 @@
 
 - **Prerequisite**: PowerShell must be installed on your system for the script to function correctly.
 
-### `render_srt.bat` Usage Instructions
+## `render_srt.bat` Usage Instructions
 
 1. **Drag and Drop**: To add SRT subtitles to video files, simply drag and drop one or more video files onto the `render_srt.bat` script.
 
