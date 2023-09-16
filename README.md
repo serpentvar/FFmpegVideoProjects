@@ -1,2 +1,18 @@
-# FFmpegVideoProjects
-FFmpegVideoProjects 是一個用於展示使用 FFmpeg 進行的各種影片編輯技術的 GitHub 存儲庫。這裡包括但不限於視頻剪輯、覆蓋、縮放和字幕添加。
+## Introduction
+Welcome to `FFmpegVideoProjects`. This repository serves as a showcase for various video editing techniques using FFmpeg. Techniques include, but are not limited to, video cropping, overlaying, scaling, and adding subtitles.
+
+## Features
+- Video Cropping
+- Video Scaling
+- Video Overlaying
+- Adding Subtitles
+
+## Prerequisites
+- FFmpeg installed ([Installation guide](https://ffmpeg.org/download.html))
+
+## Usage
+To use the scripts from this repository, first clone it to your local machine. Navigate to the script directory and run the scripts on your video files.
+
+### Video Cropping and Scaling
+```batch
+for %%a in (%*) do "ffmpeg.exe" -i %%a -vf "scale=-1:1920,crop=1080:1920" -c:v h264_nvenc -preset slow -cq 0 -b:v 16000k -c:a copy "%%~na_shorts.mp4"
