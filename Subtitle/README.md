@@ -3,6 +3,12 @@
 ## Purpose
 This script is used to convert SRT (SubRip) subtitle files to ASS (Advanced SubStation Alpha) format and modify the ASS styles to meet specific requirements.
 
+## Quick Usage (Drag and Drop)
+1. Place the SRT subtitle files you want to convert in the same directory as `srt2ass.bat`.
+2. Drag and drop one or more SRT files onto `srt2ass.bat`.
+3. The script will automatically convert the dragged files to ASS format with modified styles.
+4. The converted ASS files will be saved in the same directory.
+
 ## Usage
 1. Place the SRT subtitle files you want to convert in the same directory as Batch Script 1.
 2. Run Batch Script 1.
@@ -23,12 +29,19 @@ Here, we define a style named "Default" using the "Microsoft JhengHei" font with
 ## Purpose
 This script is used to embed ASS-formatted subtitles into video files, creating a new video file with embedded subtitles.
 
+## Quick Usage (Drag and Drop)
+1. Place the SRT subtitle files you want to convert in the same directory as Batch Script.
+2. Run Batch Script.
+3. The script will automatically scan all SRT files in the directory and convert them to ASS format.
+4. The converted ASS files will be saved in the same directory with styles modified as specified.
+
+
 ## Usage
 1. Place the video files you want to process in the same directory as Batch Script 2.
 2. Run Batch Script 2, passing the video file you want to process as an argument, for example:
 
 ```batch
-script2.bat video.mp4
+render_ass_h264.bat video.mp4
 ```
 
 3. The script will use FFmpeg to embed the ASS subtitles into the video and generate a new video file with subtitles.
