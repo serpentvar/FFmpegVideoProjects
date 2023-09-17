@@ -25,7 +25,7 @@ This script is used to embed ASS-formatted subtitles into video files, creating 
 ## Quick Usage (Drag and Drop)
 1. Place the ASS subtitle files and MP4 video files you want to convert in the same directory.
 2. Ensure that both the ASS and MP4 video files have the same name (except for the file extensions).
-3. Drag and drop MP4 video files onto render_ass_h264_nvenc.bat.
+3. Drag and drop MP4 video files onto `render_ass_xxx.bat`.
 4. The script will use FFmpeg to embed the ASS subtitles into the video and generate a new video file with subtitles.
    
 ## Notes
