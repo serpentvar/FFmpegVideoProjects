@@ -4,7 +4,7 @@
 This script is used to convert SRT (SubRip) subtitle files to ASS (Advanced SubStation Alpha) format and modify the ASS styles to meet specific requirements.
 
 ## Quick Usage (Drag and Drop)
-1. Drag and drop one or more SRT files onto `srt2ass.bat`.
+1. Drag and drop SRT files onto `srt2ass.bat`.
 2. The script will automatically convert the dragged files to ASS format with modified styles.
 3. The converted ASS files will be saved in the same directory as SRT subtitle files.
 
@@ -24,8 +24,8 @@ This script is used to embed ASS-formatted subtitles into video files, creating 
 
 ## Quick Usage (Drag and Drop)
 1. Place the ASS subtitle files and MP4 video files you want to convert in the same directory.
-2. Ensure that both the ASS and MP4 files have the same name (except for the file extensions).
-3. Drag and drop one or more ASS subtitle files onto render_ass_h264_nvenc.bat.
+2. Ensure that both the ASS and MP4 video files have the same name (except for the file extensions).
+3. Drag and drop MP4 video files onto `render_ass_h264_nvenc.bat`.
 4. The script will use FFmpeg to embed the ASS subtitles into the video and generate a new video file with subtitles.
 
 ## Notes
