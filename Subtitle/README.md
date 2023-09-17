@@ -9,10 +9,10 @@ This script is used to convert SRT (SubRip) subtitle files to ASS (Advanced SubS
 3. The converted ASS files will be saved in the same directory as SRT subtitle files.
 
 ## Style Modification
-In Batch Script 1, you can modify the style by editing the following code segment:
+In `srt2ass.bat`, you can modify the style by editing the following code segment:
 
 ```batch
-echo Style: Default,Microsoft JhengHei,20,^&Hffffff,^&Hffffff,^&H0,^&H0,5,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1 >> "!output_ass!"
+Style: Default,Microsoft JhengHei,20,^&Hffffff,^&Hffffff,^&H0,^&H0,5,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
 ```
 
 Here, we define a style named "Default" using the "Microsoft JhengHei" font with a font size of 20. You can modify these style properties according to your needs.
