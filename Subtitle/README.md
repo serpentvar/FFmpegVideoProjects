@@ -30,7 +30,12 @@ This script is used to embed ASS-formatted subtitles into video files, creating 
    
 ## Notes
 - Ensure that FFmpeg is installed and accessible from the command line.
-- Modify the FFmpeg command-line options in `render_ass_h264_nvenc.bat` if you have an NVIDIA GPU and want to utilize hardware acceleration. If you don't have an NVIDIA GPU or prefer software encoding, you can modify the FFmpeg command-line options in `render_ass_h264.bat`.
+- There are two versions available for your convenience:
+   - `render_ass_h264_nvenc.bat`: This version is optimized for systems with an NVIDIA GPU and utilizes hardware acceleration. It is recommended for faster video encoding.
+   - `render_ass_h264.bat`: Use this version if you don't have an NVIDIA GPU or prefer software encoding.
+
+You can directly use the version that best suits your system and preferences.
+
 
 
 These scripts can help you efficiently process subtitle files and video files, resulting in a final video file with customized styles and subtitles. We hope these instructions are helpful to you!
