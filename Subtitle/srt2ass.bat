@@ -24,7 +24,7 @@ for %%F in (*.srt) do (
         if "!line!"=="[V4+ Styles]" (
             echo [V4+ Styles] >> "!output_ass!"
             echo Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding >> "!output_ass!"
-            echo Style: Default,Microsoft JhengHei,16,^&Hffffff,^&Hffffff,^&H0,^&H0,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1 >> "!output_ass!"
+            echo Style: Default,Microsoft JhengHei,20,^&Hffffff,^&Hffffff,^&H0,^&H0,5,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1 >> "!output_ass!"
             rem Set the flag to skip lines
             set "write=0"
         ) else (
