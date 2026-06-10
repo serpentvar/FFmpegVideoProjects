@@ -2,6 +2,14 @@
 
 Drag videos onto these scripts to create 1080x1920 Shorts-ready files.
 
+Current output target:
+
+- Resolution: `1080x1920`
+- Aspect ratio: `9:16`
+- Video: H.264 High Profile, `yuv420p`, 30 FPS
+- Audio: AAC, 192k, 48 kHz, stereo
+- Container: MP4 with `+faststart`
+
 ## Scripts
 
 - `mp4_short_h264_nvenc.bat`: Crop to 1080x1920 and encode with NVIDIA NVENC.

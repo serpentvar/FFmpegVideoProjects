@@ -1,10 +1,13 @@
 @echo off
-:loop
-if "%~1"=="" goto continue
+setlocal
 
-ffmpeg -i "%~1" -c:v h264_nvenc -preset:v fast -b:v 15000k -maxrate 15000k -bufsize 30000k -r 60 -g 120 -keyint_min 60 -sc_threshold 0 -c:a copy -f mp4 -y "%~dpn1_compressed_4k.mp4"
-shift
-goto loop
+for %%a in (%*) do (
+  "ffmpeg.exe" -hide_banner -y -i "%%~fa" ^
+  -c:v h264_nvenc -preset p5 -rc vbr -cq 18 -b:v 60M -maxrate 68M -bufsize 120M ^
+  -profile:v high -pix_fmt yuv420p ^
+  -c:a aac -b:a 192k -ar 48000 -ac 2 ^
+  -movflags +faststart ^
+  "%%~dpna_youtube_4k.mp4"
+)
 
-:continue
 pause

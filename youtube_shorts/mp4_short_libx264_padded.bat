@@ -20,7 +20,7 @@ for %%A in (%*) do (
   set "OUT=%%~dpnA_shorts.mp4"
 
   echo Processing: %%~nxA
-  ffmpeg -y -i "!IN!" -vf "scale=1080:1920:force_original_aspect_ratio=decrease,setsar=1,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" -c:v libx264 -preset %PRESET% -profile:v high -level 4.1 -pix_fmt yuv420p -crf %CRF% -maxrate %MAXRATE% -bufsize %BUFSIZE% -g %KEYINT% -sc_threshold 0 -color_primaries bt709 -color_trc bt709 -colorspace bt709 -c:a aac -b:a %AUDIO_BR% -ar 48000 -ac 2 -movflags +faststart "!OUT!"
+  ffmpeg -hide_banner -y -i "!IN!" -vf "scale=1080:1920:force_original_aspect_ratio=decrease,setsar=1,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" -c:v libx264 -preset %PRESET% -profile:v high -level 4.1 -pix_fmt yuv420p -crf %CRF% -maxrate %MAXRATE% -bufsize %BUFSIZE% -r 30 -g %KEYINT% -sc_threshold 0 -color_primaries bt709 -color_trc bt709 -colorspace bt709 -c:a aac -b:a %AUDIO_BR% -ar 48000 -ac 2 -movflags +faststart "!OUT!"
 )
 
 echo Done. Output: *_shorts.mp4
