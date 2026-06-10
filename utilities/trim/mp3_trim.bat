@@ -1,5 +1,5 @@
 @echo off
-setlocal
+setlocal EnableExtensions EnableDelayedExpansion
 
 if "%~1"=="" (
   echo Drag one or more audio or video files onto this script.
@@ -19,7 +19,23 @@ if /I "%INPUT%"=="n" goto done
 if /I not "%INPUT%"=="y" goto reinput
 
 for %%a in (%*) do (
-  ffmpeg.exe -ss %begin% -i "%%~fa" -to %end% -vn -b:a 128k -c:a libmp3lame -ar 48000 "%%~dpna_trim_result.mp3"
+  if %%~za EQU 0 (
+    echo Skipping empty input file: %%~fa
+  ) else (
+    set "OUT=%%~dpna_trim_result.mp3"
+    set "TMP=%%~dpna_trim_result.tmp.mp3"
+    if exist "!TMP!" del /q "!TMP!"
+
+    ffmpeg.exe -y -ss %begin% -i "%%~fa" -to %end% -vn -b:a 128k -c:a libmp3lame -ar 48000 "!TMP!"
+
+    if errorlevel 1 (
+      echo Failed: %%~fa
+      if exist "!TMP!" del /q "!TMP!"
+    ) else (
+      move /y "!TMP!" "!OUT!" > nul
+      echo Created: !OUT!
+    )
+  )
 )
 
 :done
