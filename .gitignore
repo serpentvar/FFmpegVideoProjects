@@ -1,0 +1,33 @@
+# Generated media
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.wav
+*.mp3
+*.aac
+
+# Local binaries and archives
+*.exe
+*.zip
+*.7z
+*.rar
+
+# Screenshots and temporary working files
+*.png
+*.jpg
+*.jpeg
+*.webp
+z_temp/
+temp/
+tmp/
+
+# FFmpeg two-pass logs
+*.log
+*-0.log
+*_log*
+
+# Windows / OneDrive noise
+Thumbs.db
+desktop.ini
+*.lnk

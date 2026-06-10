@@ -32,7 +32,9 @@ This script is used to embed ASS-formatted subtitles into video files, creating 
 - Ensure that FFmpeg is installed and accessible from the command line.
 - There are two versions available for your convenience:
    - `render_ass_h264_nvenc.bat`: This version is optimized for systems with an NVIDIA GPU and utilizes hardware acceleration. It is recommended for faster video encoding.
+   - `render_ass_h264_nvenc_no_change_res.bat`: NVIDIA GPU version that keeps the source resolution.
    - `render_ass_h264.bat`: Use this version if you don't have an NVIDIA GPU or prefer software encoding.
+   - `srt2ass_upper.bat`: Converts SRT to ASS with a larger bottom margin so subtitles sit higher on the video.
 
 You can directly use the version that best suits your system and preferences.
 

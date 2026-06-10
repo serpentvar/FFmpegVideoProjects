@@ -8,6 +8,7 @@ set "subtitle_file=!input_file:~0,-4!.srt"
 set "output_file=!input_file:~0,-4!_with_subtitles.mp4"
 
 "ffmpeg.exe" -i "!input_file!" -i "!subtitle_file!" -c:v h264_nvenc -preset medium -b:v 16000k -c:a copy -c:s mov_text "!output_file!"
+
 shift
 goto :loop
 
